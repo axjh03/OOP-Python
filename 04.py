@@ -10,6 +10,19 @@ class Dog():
 
     def description(self): # Just like instance attributes, the Instance method's first parameter is also self
         return f"The name of the dog is {self.name}"
+    
+    def printable(self):
+        print(f"The age of the dog is {self.age}")
         
-dog1 = Dog("Jimmy", 20)
-print(dog1.description)
+        
+    #Another instance method
+    def speak(self, word:str): #  variable:DataType  ... Hmmmmm. New thing..
+        print(f"{self.name} says {word}")
+
+if __name__ == '__main__':
+    dog1 = Dog("Rahul", 10)
+    
+    # Two ways, but should be coded that way as well. 
+    print(dog1.description())
+    dog1.printable()
+    dog1.speak("Bow Wow")
